@@ -11,10 +11,12 @@ const NavigationMenu = () => {
         <ul className="flex flex-row gap-2 bg-green-600/35 rounded-full">
             {navigationLinks.map((link) => {
                 return (
-                    <li className="py-6">
+                    <li className="py-6" key={link.path}>
                         <Link
-                            className={`py-6 px-8 ${
-                                pathname === link.path ? 'bg-black rounded-full text-white' : ''
+                            className={`transition py-6 px-8 mx-1 rounded-full  ${
+                                pathname === link.path
+                                    ? 'bg-black text-white'
+                                    : 'hover:bg-green-700/40'
                             }`}
                             href={link.path}>
                             {link.title}
