@@ -1,36 +1,22 @@
 import { createClient } from '@/utils/supabase/server';
 import { VideoElement } from './VideoElement';
 import AddVideoForm from './AddVideoForm';
-import { redirect } from 'next/navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'mleko/videos',
+    description: 'наши задачи и цели на сервере'
+};
 
 const Videos = async () => {
     const supabase = createClient();
     const videos = await supabase.from('videos').select('*').order('id', { ascending: true });
 
-    const addVideo = async (formData: FormData) => {
-        'use server';
-        const supabase = createClient();
-
-        const title = formData.get('title') as string;
-        const link = formData.get('link') as string;
-        const description = formData.get('description') as string;
-
-        const { error, data: response } = await supabase
-            .from('videos')
-            .insert({ title, link, description });
-
-        if (error) {
-            return redirect('/videos?message=Could not add new video');
-        }
-
-        return redirect('/videos');
-    };
-
     return (
         <div className="px-8">
             <div className="flex flex-row gap-4 mb-8 items-center">
                 <h2>Все моменты приключений запечатлены самим mleko!</h2>
-                <AddVideoForm addVideo={addVideo} />
+                <AddVideoForm />
             </div>
 
             <ul className="flex flex-col flex-wrap gap-16">

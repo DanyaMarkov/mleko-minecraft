@@ -2,8 +2,9 @@
 
 import Popup from '@/components/Popup/Popup';
 import { useState } from 'react';
+import { submitAddVideo } from './api';
 
-const AddVideoForm = ({ addVideo }: { addVideo: (formData: FormData) => void }) => {
+const AddVideoForm = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -15,7 +16,7 @@ const AddVideoForm = ({ addVideo }: { addVideo: (formData: FormData) => void }) 
                 Добавить видео
             </button>
             <Popup title="Новое видео" open={isOpen} onClose={() => setIsOpen(false)}>
-                <form action={addVideo}>
+                <form action={submitAddVideo}>
                     <div>
                         <label className="mt-4 block text-sm font-medium text-gray-900 dark:text-white">
                             Название серии

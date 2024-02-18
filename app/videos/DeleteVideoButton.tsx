@@ -1,21 +1,12 @@
 'use client';
 
 import { TiTrash } from 'react-icons/ti';
+import { handleDeleteVideo } from './api';
 
-const DeleteVideoButton = ({
-    videoId,
-    deleteVideo
-}: {
-    videoId: number;
-    deleteVideo: (videoId: number) => void;
-}) => {
-    const handleDeleteVideo = () => {
-        deleteVideo(videoId);
-    };
-
+const DeleteVideoButton = ({ videoId }: { videoId: number }) => {
     return (
         <button
-            onClick={handleDeleteVideo}
+            onClick={() => handleDeleteVideo(videoId)}
             className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2 rounded inline-flex items-center">
             <TiTrash />
         </button>

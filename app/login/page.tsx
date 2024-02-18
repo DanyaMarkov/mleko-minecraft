@@ -3,6 +3,12 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { LoginFormInputsType } from './types';
 import { redirect } from 'next/navigation';
 import { cookies } from 'next/headers';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'mleko/login',
+    description: 'наши задачи и цели на сервере'
+};
 
 const Login = async () => {
     const signIn = async (formData: FormData) => {
@@ -54,7 +60,7 @@ const Login = async () => {
             // onSubmit={signIn}
             action={signIn}>
             <div>
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <label className="mt-4 block text-sm font-medium text-white-900 dark:text-white">
                     Ваш никнейм:
                 </label>
                 <input
@@ -63,7 +69,7 @@ const Login = async () => {
                 />
             </div>
             <div>
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <label className="mt-4 block text-sm font-medium text-white-900 dark:text-white">
                     Пароль:
                 </label>
                 <input
@@ -75,12 +81,12 @@ const Login = async () => {
             <div className="flex flex-row gap-4 py-4">
                 <button
                     type="submit"
-                    className="border border-foreground/20 rounded-md px-4 py-2 mb-2">
+                    className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Войти
                 </button>
                 <button
                     formAction={signUp}
-                    className="border border-foreground/20 rounded-md px-4 py-2 mb-2">
+                    className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Зарегистрироваться
                 </button>
             </div>

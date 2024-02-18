@@ -3,6 +3,12 @@ import { createClient } from '@/utils/supabase/server';
 import { BoardType, TaskType } from './variables';
 import AddTask from './AddTask';
 import { redirect } from 'next/navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'mleko/tasks',
+    description: 'наши задачи и цели на сервере'
+};
 
 const Tasks = async () => {
     const supabase = createClient();

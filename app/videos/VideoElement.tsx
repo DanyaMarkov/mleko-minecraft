@@ -11,18 +11,18 @@ import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
 
 export const VideoElement = ({ videoId, title, link, description }: VideoElementProps) => {
-    const handleDeleteVideo = async (videoId: number) => {
-        'use server';
-        const supabase = createClient();
+    // const handleDeleteVideo = async (videoId: number) => {
+    //     'use server';
+    //     const supabase = createClient();
 
-        const { error } = await supabase.from('videos').delete().eq('id', videoId);
+    //     const { error } = await supabase.from('videos').delete().eq('id', videoId);
 
-        if (error) {
-            return redirect('/videos?message=Could not add new video');
-        }
+    //     if (error) {
+    //         return redirect('/videos?message=Could not add new video');
+    //     }
 
-        return redirect('/videos');
-    };
+    //     return redirect('/videos');
+    // };
 
     return (
         <li className="flex flex-row gap-4 items-center">
@@ -40,7 +40,7 @@ export const VideoElement = ({ videoId, title, link, description }: VideoElement
                 <h3 className="text-2xl">{title}</h3>
                 <p>{description}</p>
             </div>
-            <DeleteVideoButton videoId={videoId} deleteVideo={handleDeleteVideo} />
+            <DeleteVideoButton videoId={videoId} />
         </li>
     );
 };
