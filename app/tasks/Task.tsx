@@ -22,7 +22,7 @@ const Task = ({ task }: { task: TaskType }) => {
         <li
             ref={drag}
             draggable
-            className={`border-2 rounded-lg shadow-md bg-white border-white p-6 mt-4 border-r-4 cursor-grab relative ${
+            className={`border-2 rounded-lg shadow-md bg-white hover:bg-white/80 border-white p-6 mt-4 border-r-4 cursor-grab relative ${
                 isDragging ? 'opacity-25' : 'opacity-100'
             }`}>
             {task.title}

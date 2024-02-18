@@ -10,7 +10,10 @@ export const metadata: Metadata = {
 
 const Videos = async () => {
     const supabase = createClient();
-    const videos = await supabase.from('videos').select('*').order('id', { ascending: true });
+    const videos = await supabase
+        .from('videos')
+        .select('*')
+        .order('episodeNumber', { ascending: true });
 
     return (
         <div className="px-8">
@@ -19,16 +22,10 @@ const Videos = async () => {
                 <AddVideoForm />
             </div>
 
-            <ul className="flex flex-col flex-wrap gap-16">
+            <ul className="grid grid-cols-3 gap-4">
+                {/* <ul className="flex flex-row flex-wrap gap-4"> */}
                 {videos?.data?.map((video) => {
-                    return (
-                        <VideoElement
-                            videoId={video.id}
-                            title={video.title}
-                            link={video.link}
-                            description={video.description}
-                        />
-                    );
+                    return <VideoElement videoInfo={video} />;
                 })}
             </ul>
         </div>

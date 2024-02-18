@@ -18,13 +18,14 @@ export const handleDeleteVideo = async (videoId: number) => {
 export const submitAddVideo = async (formData: FormData) => {
     const supabase = createClient();
 
+    const episodeNumber = formData.get('episodeNumber') as string;
     const title = formData.get('title') as string;
     const link = formData.get('link') as string;
     const description = formData.get('description') as string;
 
     const { error, data: response } = await supabase
         .from('videos')
-        .insert({ title, link, description });
+        .insert({ episodeNumber, title, link, description });
 
     if (error) {
         return redirect('/videos?message=Could not add new video');
