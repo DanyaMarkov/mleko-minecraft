@@ -10,8 +10,10 @@ const ProfileSettings = () => {
     return (
         <Link
             href="/profile"
-            className={`transition flex flex-column justify-around items-center rounded-full h-full px-6  hover:bg-green-700/40 ${
-                pathname === '/profile' ? 'bg-black text-white' : 'bg-green-600/75'
+            className={`transition flex flex-column justify-around items-center rounded-full h-full px-6 ${
+                pathname === '/profile'
+                    ? 'bg-black hover:bg-black/80 fill-white'
+                    : 'bg-green-600/75 hover:bg-green-700/40'
             }`}>
             <VscSettingsGear size={18} />
         </Link>

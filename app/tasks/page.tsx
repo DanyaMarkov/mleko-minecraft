@@ -22,19 +22,8 @@ const Tasks = async () => {
 
     const boards = (await taskBoards.data) as BoardType[];
 
-    // попробовать серверную кнопку сделать
-    const taskMove = async (taskId: number, boardId: number) => {
-        'use server';
-        const { error } = await supabase.from('tasks').update({ boardId }).eq('id', taskId);
-
-        if (error) {
-            return redirect('/tasks?message=Could not move task');
-        }
-        return redirect('/tasks');
-    };
-
     return (
-        <div>
+        <div className="flex flex-col items-start">
             <AddTask />
             <Trello boards={boards} tasks={tasks.data as TaskType[]} />
         </div>

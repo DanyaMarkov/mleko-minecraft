@@ -15,7 +15,7 @@ const NavigationMenu = () => {
                         <Link
                             className={`transition py-6 px-8 mx-1 rounded-full  ${
                                 pathname === link.path
-                                    ? 'bg-black text-white'
+                                    ? 'bg-black hover:bg-black/80 text-white'
                                     : 'hover:bg-green-700/40'
                             }`}
                             href={link.path}>

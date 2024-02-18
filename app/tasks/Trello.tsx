@@ -14,7 +14,7 @@ type TrelloProps = {
 const Trello = ({ boards, tasks }: TrelloProps) => {
     return (
         <DndProvider backend={HTML5Backend}>
-            <div className="flex flex-row gap-8">
+            <div className="grid grid-cols-3  w-full gap-8 mt-4">
                 {boards?.map((board) => {
                     return (
                         <Board

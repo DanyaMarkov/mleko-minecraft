@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en" className={comfortaa.className}>
             <body>
                 <Header />
-                <main className="min-h-min flex flex-col items-center">{children}</main>
+                <main className="min-h-min flex flex-col">{children}</main>
             </body>
         </html>
     );

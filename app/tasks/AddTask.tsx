@@ -14,7 +14,7 @@ const AddTask = () => {
     };
 
     return (
-        <form ref={formRef} action={addVideo} className="flex w-full flex-row gap-4 m-6">
+        <form ref={formRef} action={addVideo} className="flex w-full flex-row gap-4">
             <div>
                 <input
                     name="title"

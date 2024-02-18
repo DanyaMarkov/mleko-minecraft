@@ -25,8 +25,12 @@ const Board = ({ id, title, tasks }: BoardProps) => {
     }));
 
     return (
-        <div ref={drop} className={`p-4 border-2 border-gray-50 ${isOver ? 'bg-slate-600' : ''}`}>
-            <h2>{title}</h2>
+        <div
+            ref={drop}
+            className={` p-4 border-2 border-gray-50 bg-slate-200 text-black rounded-xl ${
+                isOver ? 'bg-[#cccccc]' : ''
+            }`}>
+            <h2 className="font-black">{title}</h2>
             <ul>
                 {tasks.map((task: TaskType) => {
                     return <Task task={task} key={task.id} />;
