@@ -9,11 +9,12 @@ const Header = () => {
     const currentUser = cookieStore.get('user');
 
     return (
-        <div className="flex px-8 flex-row justify-between items-center h-24 sticky top-0 bg-green-900">
+        // <div className="flex px-8 flex-row justify-between items-center h-24 sticky top-0 bg-green-900">
+        <header className="px-8 grid grid-cols-[300px_auto_300px] gap-8 items-center h-24 sticky top-0 bg-green-900">
             <Logo />
             <NavigationMenu />
             {currentUser ? <Account /> : <AuthButton />}
-        </div>
+        </header>
     );
 };
 

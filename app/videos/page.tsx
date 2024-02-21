@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'mleko/videos',
-    description: 'наши задачи и цели на сервере'
+    description: 'список видео-серий'
 };
 
 const Videos = async () => {

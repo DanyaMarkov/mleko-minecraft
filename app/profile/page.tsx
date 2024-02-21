@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'mleko/profile',
-    description: 'наши задачи и цели на сервере'
+    description: 'страница профиля'
 };
 
 const Profile = () => {

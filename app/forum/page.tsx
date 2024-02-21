@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'mleko/forum',
-    description: 'наши задачи и цели на сервере'
+    description: 'обсуждения'
 };
 
 const Forum = () => {

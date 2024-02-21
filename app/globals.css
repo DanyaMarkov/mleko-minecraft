@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-primary {
+    @apply block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+  }
+}
 
 body::-webkit-scrollbar {
   width: 12px;
@@ -10,7 +15,6 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
   border-radius: 8px;
   background-color: transparent;
-  /* background-color: #e7e7e7; */
   box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
 }
 
