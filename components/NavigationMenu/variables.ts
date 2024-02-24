@@ -4,7 +4,7 @@ export const navigationLinks = [
         path: '/'
     },
     {
-        title: 'Видео-материалы',
+        title: 'Видеоматериалы',
         path: '/videos'
     },
     {

@@ -10,23 +10,20 @@ type PopupProps = {
 const Popup = ({ open, title, onClose, children }: PopupProps) => {
     return (
         <div
-            className={`fixed inset-0 flex justify-center items-center 
-      transition-colors ${open ? 'visible bg-black/20' : 'invisible'}
-      `}
+            className={`fixed inset-0 flex items-center justify-center transition-colors ${open ? 'visible bg-black/20' : 'invisible'}`}
             onClick={onClose}>
             <div
-                className={`bg-white min-w-96 rounded-lg shadow p-6
-          transition-all max-w-md 
-          ${open ? 'scale-100 opacity-100' : 'scale-110 opacitiy-0'}`}
+                className={`min-w-96 max-w-md rounded-lg bg-white p-6 shadow transition-all 
+          ${open ? 'scale-100 opacity-100' : 'opacitiy-0 scale-110'}`}
                 onClick={(e) => e.stopPropagation()}>
                 <div>
-                    <span className="text-black absolute top-3 left-2 font-extrabold">{title}</span>
+                    <span className="absolute left-2 top-3 font-extrabold text-black">{title}</span>
                     <button
                         type="button"
-                        className="absolute top-2 right-2 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        className="absolute right-2 top-2 ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
                         onClick={onClose}>
                         <svg
-                            className="w-3 h-3"
+                            className="h-3 w-3"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"

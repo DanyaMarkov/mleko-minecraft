@@ -8,14 +8,14 @@ const NavigationMenu = () => {
     const pathname = usePathname();
 
     return (
-        <ul className="flex w-fit self-center justify-self-center flex-row gap-2 bg-green-600/35 rounded-full">
+        <ul className="hidden w-fit flex-row gap-2 self-center rounded-full bg-green-600/35 sm:hidden md:hidden lg:flex lg:justify-self-center">
             {navigationLinks.map((link) => {
                 return (
                     <li className="py-6" key={link.path}>
                         <Link
-                            className={`transition py-6 px-8 mx-1 rounded-full break-normal ${
+                            className={`mx-1 break-normal rounded-full px-8 py-6 transition ${
                                 pathname === link.path
-                                    ? 'bg-black hover:bg-black/80 text-white'
+                                    ? 'bg-black text-white hover:bg-black/80'
                                     : 'hover:bg-green-700/40'
                             }`}
                             href={link.path}>

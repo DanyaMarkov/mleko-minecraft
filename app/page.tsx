@@ -17,9 +17,9 @@ export default async function Index() {
     const isSupabaseConnected = canInitSupabaseClient();
 
     return (
-        <div className="animate-in grid grid-cols-2 justify-around items-center">
-            <div>
-                <h2 className="font-bold text-4xl mb-4">Что такое Mleko Minecraft?</h2>
+        <div className="animate-in m-auto grid w-full grid-cols-2 items-center self-center ">
+            <div className="w-full justify-self-center">
+                <h2 className="mb-4 text-4xl font-bold">Что такое Mleko Minecraft?</h2>
                 <p>
                     Привет, это проект Mleko Minecraft, где мы решили пройти Майнкрафт
                     по-настоящему! Следите за нашими успехами на этом сайте!
@@ -30,7 +30,7 @@ export default async function Index() {
                 width={260}
                 height={260}
                 alt="mleko main"
-                className="hover:animate-spin rounded-xl"
+                className="rounded-xl hover:animate-spin"
             />
         </div>
     );

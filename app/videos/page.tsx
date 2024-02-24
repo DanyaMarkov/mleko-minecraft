@@ -17,12 +17,12 @@ const Videos = async () => {
 
     return (
         <div className="px-8">
-            <div className="flex flex-row gap-4 mb-8 items-center">
+            <div className="mb-8 flex flex-row items-center gap-4">
                 <h2>Все моменты приключений запечатлены самим mleko!</h2>
                 <AddVideoForm />
             </div>
 
-            <ul className="grid grid-cols-3 gap-4">
+            <ul className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {/* <ul className="flex flex-row flex-wrap gap-4"> */}
                 {videos?.data?.map((video) => {
                     return <VideoElement videoInfo={video} />;
