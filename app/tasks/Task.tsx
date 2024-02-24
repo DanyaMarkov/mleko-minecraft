@@ -22,11 +22,14 @@ const Task = ({ task }: { task: TaskType }) => {
         <li
             ref={drag}
             draggable
-            className={`border-2 rounded-lg shadow-md bg-white hover:bg-white/80 border-white p-6 mt-4 border-r-4 cursor-grab relative ${
+            className={`lg:text-md z-0 mt-4 flex cursor-grab flex-col items-center break-words rounded-lg border-2 border-r-4 border-white bg-white p-2 text-sm shadow-md hover:bg-white/80 lg:relative lg:items-start lg:p-6 ${
                 isDragging ? 'opacity-25' : 'opacity-100'
             }`}>
             {task.title}
-            <button onClick={() => removeTask(task.id)} className="absolute top-1 right-1">
+            <button
+                onClick={() => removeTask(task.id)}
+                // className="selft-center lg:self-auto"
+                className="block  lg:absolute lg:right-1 lg:top-1">
                 <TiDelete size={28} className="fill-red-600 hover:fill-red-400" />
             </button>
         </li>

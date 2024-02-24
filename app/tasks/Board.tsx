@@ -27,7 +27,7 @@ const Board = ({ id, title, tasks }: BoardProps) => {
     return (
         <div
             ref={drop}
-            className={` p-4 border-2 border-gray-50 bg-slate-200 text-black rounded-xl ${
+            className={`rounded-xl border-2 border-gray-50 bg-slate-200 p-2 text-black lg:p-4 ${
                 isOver ? 'bg-[#cecece]' : ''
             }`}>
             <h2 className="font-black">{title}</h2>

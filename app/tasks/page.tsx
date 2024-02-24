@@ -23,7 +23,7 @@ const Tasks = async () => {
     const boards = (await taskBoards.data) as BoardType[];
 
     return (
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-center">
             <AddTask />
             <Trello boards={boards} tasks={tasks.data as TaskType[]} />
         </div>

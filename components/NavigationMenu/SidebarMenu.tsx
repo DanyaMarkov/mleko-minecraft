@@ -20,7 +20,6 @@ const SidebarMenu = () => {
             </button>
             <>
                 <div
-                    // id="drawer-navigation"
                     className={`z-49 absolute left-0 top-0 h-screen w-64 lg:hidden ${isShowMenu ? '' : '-translate-x-full'} overflow-y-auto bg-white p-4 transition-transform dark:bg-gray-800`}
                     tabIndex={-1}>
                     <h5 className="text-base font-semibold uppercase text-gray-500 dark:text-gray-400">
@@ -43,6 +42,7 @@ const SidebarMenu = () => {
                                                     ? 'bg-black text-white hover:bg-black/80'
                                                     : 'bg-green-700 hover:bg-green-700/40'
                                             }`}
+                                            onClick={() => setIsShowMenu(false)}
                                             href={link.path}>
                                             {link.title}
                                         </Link>

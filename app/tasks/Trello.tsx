@@ -2,6 +2,8 @@
 
 import { BoardType, TaskType, initialBoards, initialTasks } from './variables';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import { TouchBackend } from 'react-dnd-touch-backend';
+
 import { DndProvider } from 'react-dnd';
 import Board from './Board';
 import { Nullable } from '@/global/types';
@@ -12,9 +14,13 @@ type TrelloProps = {
 };
 
 const Trello = ({ boards, tasks }: TrelloProps) => {
+    const dndOptions = {
+        enableMouseEvents: true
+    };
+
     return (
-        <DndProvider backend={HTML5Backend}>
-            <div className="grid grid-cols-3  w-full gap-8 mt-4">
+        <DndProvider backend={TouchBackend} options={dndOptions}>
+            <div className="mt-4 grid w-full grid-cols-3 gap-2 px-2 lg:gap-8">
                 {boards?.map((board) => {
                     return (
                         <Board
