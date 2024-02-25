@@ -12,7 +12,7 @@ const LogoutButton = ({ resetCookies }: { resetCookies: () => any }) => {
     return (
         <button
             onClick={logout}
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
+            className="rounded border border-red-700 bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700">
             Выйти
         </button>
     );

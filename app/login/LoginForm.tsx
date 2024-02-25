@@ -37,36 +37,36 @@ const LoginForm = () => {
     return (
         <form
             onSubmit={handleSubmit(submitAuthorization)}
-            className="grid content-center w-min my-0 mx-auto">
+            className="mx-auto my-0 grid w-min content-center">
             <div>
-                <label className="mt-4 block text-sm font-medium text-white-900 dark:text-white">
+                <label className="text-white-900 mt-4 block text-sm font-medium dark:text-white">
                     Ваш никнейм:
                 </label>
                 <input
                     type="text"
                     placeholder="Ваш никнейм"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     {...register('nickname', {
                         required: 'Обязательное поле',
                         validate: validateTrim
                     })}
                 />
-                <span className="text-red-600 text-sm italic">{errors.nickname?.message}</span>
+                <span className="text-sm italic text-red-600">{errors.nickname?.message}</span>
             </div>
             <div>
-                <label className="mt-4 block text-sm font-medium text-white-900 dark:text-white">
+                <label className="text-white-900 mt-4 block text-sm font-medium dark:text-white">
                     Пароль:
                 </label>
                 <input
                     type="password"
                     placeholder="Пароль"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     {...register('password', {
                         required: 'Обязательное поле',
                         validate: validateTrim
                     })}
                 />
-                <span className="text-red-600 text-sm italic">{errors.password?.message}</span>
+                <span className="text-sm italic text-red-600">{errors.password?.message}</span>
             </div>
             <div className="flex flex-row gap-4 py-4">
                 <button type="submit" className="btn-primary">
