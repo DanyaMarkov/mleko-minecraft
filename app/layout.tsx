@@ -20,7 +20,7 @@ const comfortaa = Comfortaa({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" data-theme="dark" className={comfortaa.className}>
+        <html lang="ru" className={comfortaa.className}>
             <body className="bg-[#edeef0] dark:bg-[#22272e]">
                 <Provider>
                     <Header />

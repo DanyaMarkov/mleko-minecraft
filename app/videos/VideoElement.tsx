@@ -12,7 +12,7 @@ type VideoElementProps = {
 
 export const VideoElement = ({ videoInfo }: VideoElementProps) => {
     return (
-        <li className="flex h-full w-full flex-row items-start gap-4 rounded-xl bg-gray-50  p-4 shadow-md sm:m-auto md:flex-col dark:bg-gray-700/80">
+        <li className="flex h-full w-full flex-row items-start gap-4 rounded-xl bg-gray-50  p-4 shadow-md dark:bg-gray-700/80 sm:m-auto md:flex-col">
             {videoInfo.link.startsWith('https://www.youtube.com/embed/') ? (
                 <iframe
                     className="w-[40%] self-center justify-self-center md:w-[320px]"

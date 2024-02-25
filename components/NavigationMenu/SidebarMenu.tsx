@@ -13,10 +13,10 @@ const SidebarMenu = () => {
     return (
         <>
             <button
-                className="flex items-center gap-4 rounded-full bg-green-600/35 px-8 py-6 text-neutral-50 hover:bg-green-700/30 lg:hidden"
+                className="flex items-center gap-4 rounded-full bg-green-600/35 px-4 py-6 text-neutral-50 hover:bg-green-700/30 lg:hidden lg:px-8"
                 type="button"
                 onClick={() => setIsShowMenu(true)}>
-                <TiThMenu />
+                <TiThMenu size={24} />
             </button>
             <>
                 <div
