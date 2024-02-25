@@ -8,7 +8,7 @@ const NavigationMenu = () => {
     const pathname = usePathname();
 
     return (
-        <ul className="hidden w-fit flex-row gap-2 self-center rounded-full bg-green-600/35 sm:hidden md:hidden lg:flex lg:justify-self-center">
+        <ul className="hidden w-fit flex-row gap-2 self-center rounded-full bg-green-600/35 text-neutral-50 sm:hidden md:hidden lg:flex lg:justify-self-center">
             {navigationLinks.map((link) => {
                 return (
                     <li className="py-6" key={link.path}>

@@ -7,7 +7,7 @@ const pressStart2P = Press_Start_2P({
 
 const Logo = () => {
     return (
-        <div className="font-bold">
+        <div className="font-bold text-white">
             <span className={pressStart2P.className}>mleko minecraft</span>
         </div>
     );

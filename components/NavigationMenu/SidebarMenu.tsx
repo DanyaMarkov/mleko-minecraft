@@ -13,7 +13,7 @@ const SidebarMenu = () => {
     return (
         <>
             <button
-                className="flex items-center gap-4 rounded-full bg-green-600/35 px-8 hover:bg-green-700/30 lg:hidden"
+                className="flex items-center gap-4 rounded-full bg-green-600/35 px-8 py-6 text-neutral-50 hover:bg-green-700/30 lg:hidden"
                 type="button"
                 onClick={() => setIsShowMenu(true)}>
                 <TiThMenu />
@@ -35,9 +35,9 @@ const SidebarMenu = () => {
                         <ul className="space-y-2 font-medium">
                             {navigationLinks.map((link) => {
                                 return (
-                                    <li className="py-6" key={link.path}>
+                                    <li className="py-6 text-neutral-50" key={link.path}>
                                         <Link
-                                            className={`mx-1 break-normal px-2 py-6 transition ${
+                                            className={`width-[224px] mx-1 break-normal px-2 py-6 transition ${
                                                 pathname === link.path
                                                     ? 'bg-black text-white hover:bg-black/80'
                                                     : 'bg-green-700 hover:bg-green-700/40'

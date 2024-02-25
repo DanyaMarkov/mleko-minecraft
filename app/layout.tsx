@@ -1,6 +1,7 @@
 import { Comfortaa } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header/Header';
+import Provider from '../components/AppTheme/Provider';
 
 const defaultUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
@@ -19,10 +20,12 @@ const comfortaa = Comfortaa({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={comfortaa.className}>
-            <body className="">
-                <Header />
-                <main className="min-h-min">{children}</main>
+        <html lang="en" data-theme="dark" className={comfortaa.className}>
+            <body className="bg-[#edeef0] dark:bg-[#22272e]">
+                <Provider>
+                    <Header />
+                    <main>{children}</main>
+                </Provider>
             </body>
         </html>
     );

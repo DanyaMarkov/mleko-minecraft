@@ -2,8 +2,8 @@ import Trello from './Trello';
 import { createClient } from '@/utils/supabase/server';
 import { BoardType, TaskType } from './variables';
 import AddTask from './AddTask';
-import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
 
 export const metadata: Metadata = {
     title: 'mleko/tasks',
@@ -25,7 +25,11 @@ const Tasks = async () => {
     return (
         <div className="flex flex-col items-center">
             <AddTask />
-            <Trello boards={boards} tasks={tasks.data as TaskType[]} />
+            <Trello
+                boards={boards}
+                tasks={tasks.data as TaskType[]}
+                userAgentData={headers().get('user-agent') ?? ''}
+            />
         </div>
     );
 };

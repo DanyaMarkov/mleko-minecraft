@@ -1,23 +1,11 @@
-import { createClient } from '@/utils/supabase/server';
 import Image from 'next/image';
 import mleko from '@/assets/image/mleko.jpg';
 
-export default async function Index() {
-    const canInitSupabaseClient = () => {
-        // This function is just for the interactive tutorial.
-        // Feel free to remove it once you have Supabase connected.
-        try {
-            createClient();
-            return true;
-        } catch (e) {
-            return false;
-        }
-    };
+export const dynamic = 'force-static';
 
-    const isSupabaseConnected = canInitSupabaseClient();
-
+export default function Index() {
     return (
-        <div className="animate-in m-auto grid w-full grid-cols-2 items-center self-center ">
+        <div className="animate-in m-auto flex w-full flex-col items-center self-center px-6 md:grid md:grid-cols-[auto_370px]">
             <div className="w-full justify-self-center">
                 <h2 className="mb-4 text-4xl font-bold">Что такое Mleko Minecraft?</h2>
                 <p>
@@ -27,10 +15,8 @@ export default async function Index() {
             </div>
             <Image
                 src={mleko}
-                width={260}
-                height={260}
                 alt="mleko main"
-                className="rounded-xl hover:animate-spin"
+                className="h-[150px] w-[150px] self-center rounded-xl hover:animate-spin md:h-[280px] md:w-[280px]"
             />
         </div>
     );
