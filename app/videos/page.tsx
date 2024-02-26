@@ -23,9 +23,8 @@ const Videos = async () => {
             </div>
 
             <ul className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {/* <ul className="flex flex-row flex-wrap gap-4"> */}
                 {videos?.data?.map((video) => {
-                    return <VideoElement videoInfo={video} />;
+                    return <VideoElement key={video} videoInfo={video} />;
                 })}
             </ul>
         </div>

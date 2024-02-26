@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-// import { VscSettingsGear } from 'react-icons/vsc';
-import defaultAvatar from '../../assets/image/defaultAvatar.jpg';
+import defaultAvatar from '@/assets/image/defaultAvatar.jpg';
 
 const ProfileSettings = ({ userName }: { userName?: string }) => {
     const pathname = usePathname();

@@ -3,7 +3,7 @@
 import { createClient } from '@/utils/supabase/server';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { LoginFormType } from './LoginForm';
+import { LoginFormType } from './types';
 
 export const signIn = async (formData: LoginFormType) => {
     const supabase = createClient();
@@ -19,13 +19,14 @@ export const signIn = async (formData: LoginFormType) => {
     }
 
     cookies().set('user', formData.nickname);
+
     return redirect('/');
 };
 
 export const signUp = async (formData: LoginFormType) => {
     const supabase = createClient();
 
-    const { error, data: response } = await supabase
+    const { error } = await supabase
         .from('users')
         .insert({ nickname: formData.nickname, password: formData.password });
 
@@ -34,5 +35,6 @@ export const signUp = async (formData: LoginFormType) => {
     }
 
     cookies().set('user', formData.nickname);
+
     return redirect('/profile');
 };

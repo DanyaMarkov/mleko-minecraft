@@ -2,14 +2,8 @@
 
 import { useForm } from 'react-hook-form';
 import { signIn, signUp } from './api';
-
-/* Функция валидации (чтобы пустая строка не прошла) */
-const validateTrim = (value: string) => value.trim() !== '';
-
-export type LoginFormType = {
-    nickname: string;
-    password: string;
-};
+import { LoginFormType } from './types';
+import { validateTrim } from '@/global/utils';
 
 const loginFormDefaultValues: LoginFormType = {
     nickname: '',

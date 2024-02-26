@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import AddTopic from './AddTopic';
+import { cookies } from 'next/headers';
 
 export const dynamic = 'force-static';
 
@@ -8,7 +10,10 @@ export const metadata: Metadata = {
 };
 
 const Forum = () => {
-    return <div> здесь обсуждения по темам! </div>;
+    const cookieStore = cookies();
+    const currentUser = cookieStore.get('user');
+
+    return <div>{currentUser?.value && <AddTopic />}</div>;
 };
 
 export default Forum;

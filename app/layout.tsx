@@ -1,7 +1,7 @@
 import { Comfortaa } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header/Header';
-import Provider from '../components/AppTheme/Provider';
+import Provider from '@/components/AppTheme/Provider';
 
 const defaultUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`

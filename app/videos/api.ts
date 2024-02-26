@@ -23,7 +23,7 @@ export const submitAddVideo = async (formData: FormData) => {
     const link = formData.get('link') as string;
     const description = formData.get('description') as string;
 
-    const { error, data: response } = await supabase
+    const { error } = await supabase
         .from('videos')
         .insert({ episodeNumber, title, link, description });
 

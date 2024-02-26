@@ -4,13 +4,16 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\""
+        "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
+        "lint": "eslint . --ext .js --ext .jsx"
     },
     "dependencies": {
+        "@next/eslint-plugin-next": "^14.1.0",
         "@next/font": "^14.1.0",
         "@supabase/ssr": "latest",
         "@supabase/supabase-js": "latest",
         "autoprefixer": "10.4.17",
+        "eslint-config-next": "^14.1.0",
         "geist": "^1.2.1",
         "next": "latest",
         "next-themes": "^0.2.1",
@@ -31,7 +34,11 @@
         "@types/node": "20.11.5",
         "@types/react": "18.2.48",
         "@types/react-dom": "18.2.18",
+        "@typescript-eslint/eslint-plugin": "^7.0.2",
         "encoding": "^0.1.13",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-unused-imports": "^3.1.0",
         "prettier": "^3.2.5",
         "prettier-plugin-tailwindcss": "^0.5.11"
     }
