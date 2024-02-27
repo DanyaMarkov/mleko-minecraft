@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 
-const LogoutButton = ({ resetCookies }: { resetCookies: () => any }) => {
+const LogoutButton = ({ resetCookies }: { resetCookies: () => unknown }) => {
     const router = useRouter();
 
     const logout = async () => {
