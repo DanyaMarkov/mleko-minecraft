@@ -26,7 +26,7 @@ const ProfileSettings = ({ userName }: { userName?: string }) => {
                 className="mx-2 hidden rounded-full md:block"
             />
             <div className="flex flex-col items-start gap-1">
-                <div className="px-4 font-bold md:mr-4 md:px-2">{userName}</div>
+                <div className="px-4 font-bold text-white md:mr-4 md:px-2">{userName}</div>
             </div>
         </Link>
     );

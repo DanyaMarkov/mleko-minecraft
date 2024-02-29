@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { VscSignOut } from 'react-icons/vsc';
 

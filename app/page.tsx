@@ -5,7 +5,8 @@ export const dynamic = 'force-static';
 
 export default function Index() {
     return (
-        <div className="animate-in m-auto flex w-full flex-col items-center self-center px-6 md:grid md:grid-cols-[auto_370px]">
+        // <div className="animate-in m-auto flex w-full flex-col items-center self-center px-6 md:grid md:grid-cols-[auto_370px]">
+        <div className="m-auto flex w-full flex-col items-center self-center px-6 md:grid md:grid-cols-[auto_370px]">
             <div className="w-full justify-self-center">
                 <h2 className="mb-4 text-4xl font-bold">Что такое Mleko Minecraft?</h2>
                 <p>
@@ -17,6 +18,7 @@ export default function Index() {
                 src={mleko}
                 alt="mleko main"
                 className="h-[150px] w-[150px] self-center rounded-xl hover:animate-spin md:h-[280px] md:w-[280px]"
+                priority
             />
         </div>
     );

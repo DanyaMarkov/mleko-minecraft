@@ -20,6 +20,8 @@ export const signIn = async (formData: LoginFormType) => {
 
     cookies().set('user', formData.nickname);
 
+    // Router.reload();
+
     return redirect('/');
 };
 
