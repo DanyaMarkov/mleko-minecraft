@@ -56,6 +56,6 @@
             "npm run lint:fix",
             "git add"
         ],
-        "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
+        "app/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
     }
 }
