@@ -47,11 +47,8 @@
         "prettier-plugin-tailwindcss": "^0.5.11"
     },
     "lint-staged": {
-        "*.{ts, tsx}": [
-            "lint",
-            "npm run lint",
-            "eslint . --ext .ts --ext .js --ext .jsx --ext .tsx --color",
-            "git add ."
+        "**/*.{ts, tsx, js, jsx}": [
+            "npx eslint . --ext .ts --ext .js --ext .jsx --ext .tsx --color"
         ],
         "app/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
     }
