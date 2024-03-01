@@ -49,8 +49,7 @@
     "lint-staged": {
         "*": [
             "npm run lint",
-            "lint",
-            "npn run error"
+            "lint"
         ]
     }
 }
