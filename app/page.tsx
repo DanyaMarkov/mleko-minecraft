@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import mleko from '@/assets/image/mleko.jpg';
 
-export const dynamic = 'force-static';
-
 export default function Index() {
     return (
         // <div className="animate-in m-auto flex w-full flex-col items-center self-center px-6 md:grid md:grid-cols-[auto_370px]">

@@ -1,16 +1,12 @@
 'use client';
 
-import ProfileSettings from '../Account/ProfileSettings';
-import AuthButton from '../AuthButton/AuthButton';
-
-function getCookie(name: string) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts?.pop()?.split(';').shift();
-}
+import ProfileSettings from '@/components/Account/ProfileSettings';
+import AuthButton from '@/components/AuthButton/AuthButton';
+import { getCookieValueByName } from '@/global/utils';
 
 const AuthInfo = () => {
-    const currentUserName = getCookie('user');
+    const currentUserName = getCookieValueByName('user');
+
     return (
         <div>
             {currentUserName ? <ProfileSettings userName={currentUserName} /> : <AuthButton />}

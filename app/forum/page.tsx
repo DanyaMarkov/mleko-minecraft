@@ -2,8 +2,6 @@ import { Metadata } from 'next';
 import AddTopic from './AddTopic';
 import { cookies } from 'next/headers';
 
-// export const dynamic = 'force-static';
-
 export const metadata: Metadata = {
     title: 'mleko/forum',
     description: 'обсуждения'

@@ -11,6 +11,12 @@
         "semi": "error",
         "jsonc/comma-dangle": "off",
         "no-console": "warn",
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": ["..*"]
+            }
+        ],
         "@typescript-eslint/semi": ["warn"],
         "@typescript-eslint/no-empty-interface": [
             "error",

@@ -13,7 +13,7 @@ const NavigationMenu = () => {
                 return (
                     <li className="py-6" key={link.path}>
                         <Link
-                            className={`mx-1 break-normal rounded-full px-8 py-6 transition ${
+                            className={`px- mx-1 break-normal rounded-full px-2 py-6 transition xl:px-8 ${
                                 pathname === link.path
                                     ? 'bg-black text-white hover:bg-black/80'
                                     : 'hover:bg-green-700/40'
