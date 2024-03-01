@@ -52,8 +52,7 @@
     },
     "lint-staged": {
         "*.{ts, tsx}": [
-            "npm run lint",
-            "npm run lint:fix",
+            "lint",
             "git add"
         ],
         "app/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
