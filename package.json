@@ -52,7 +52,7 @@
     },
     "lint-staged": {
         "*.{ts, tsx}": [
-            "lint",
+            "eslint . --ext .ts --ext .js --ext .jsx --ext .tsx --color",
             "git add ."
         ],
         "app/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
