@@ -1,4 +1,4 @@
-export let navigationLinks = [
+export var navigationLinks = [
     {
         title: 'Главная',
         path: '/'
