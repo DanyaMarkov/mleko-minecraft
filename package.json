@@ -48,7 +48,8 @@
     },
     "lint-staged": {
         "**/*.{ts, tsx, js, jsx}": [
-            "npx eslint . --ext .ts --ext .js --ext .jsx --ext .tsx --color"
+            "npx eslint . --ext .ts --ext .js --ext .jsx --ext .tsx --color",
+            "npm run lint"
         ],
         "app/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
     }
