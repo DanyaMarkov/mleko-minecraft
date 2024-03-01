@@ -1,4 +1,4 @@
-export const navigationLinks = [
+export let navigationLinks = [
     {
         title: 'Главная',
         path: '/'
