@@ -49,6 +49,7 @@
     "lint-staged": {
         "*.{ts, tsx}": [
             "lint",
+            "npm run lint",
             "eslint . --ext .ts --ext .js --ext .jsx --ext .tsx --color",
             "git add ."
         ],
