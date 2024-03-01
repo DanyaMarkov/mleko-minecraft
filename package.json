@@ -51,9 +51,12 @@
         }
     },
     "lint-staged": {
-        ".ts": [
+        "*.{ts, tsx}": [
             "npm run lint",
+            "npm run lint:fix",
             "git add"
-        ]
+        ],
+        "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+        "src/**/*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write --ignore-unknown"
     }
 }
