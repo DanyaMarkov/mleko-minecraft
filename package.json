@@ -6,7 +6,6 @@
         "start": "next start",
         "pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
         "lint": "eslint . --ext .ts --ext .js --ext .jsx --ext .tsx --color",
-        "lint:fix": "eslint . --fix . --ext .ts --ext .js --ext .jsx --ext .tsx --color",
         "prepare": "husky install"
     },
     "dependencies": {
