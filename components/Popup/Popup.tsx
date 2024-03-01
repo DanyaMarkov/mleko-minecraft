@@ -8,7 +8,6 @@ type PopupProps = {
 };
 
 const Popup = ({ open, title, onClose, children }: PopupProps) => {
-    let qq = 1;
     return (
         <div
             className={`fixed inset-0 flex items-center justify-center transition-colors ${open ? 'visible bg-black/20' : 'invisible'}`}
