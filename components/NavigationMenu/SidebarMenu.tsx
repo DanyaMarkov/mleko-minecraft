@@ -54,7 +54,6 @@ const SidebarMenu = () => {
                 </div>
 
                 <div
-                    // className={` absolute right-0 top-0 z-50 h-screen w-screen items-center justify-center bg-black/20 transition-colors lg:hidden ${isShowMenu ? '' : 'hidden'}`}
                     className={`visible absolute right-0 top-0  h-screen w-[calc(100%+-256px)] items-center justify-center bg-black/20 transition-colors lg:hidden ${isShowMenu ? '' : 'hidden'}`}
                     onClick={() => setIsShowMenu(false)}
                 />

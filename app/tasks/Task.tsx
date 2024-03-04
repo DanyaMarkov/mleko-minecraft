@@ -28,7 +28,6 @@ const Task = ({ task }: { task: TaskType }) => {
             {task.title}
             <button
                 onClick={() => removeTask(task.id)}
-                // className="selft-center lg:self-auto"
                 className="block  lg:absolute lg:right-1 lg:top-1">
                 <TiDelete size={28} className="fill-red-600 hover:fill-red-400" />
             </button>
