@@ -2,8 +2,6 @@ import Image from 'next/image';
 import mleko from '@/assets/image/mleko.jpg';
 
 export default function Index() {
-    const qq = 1;
-
     return (
         <div className="m-auto flex w-full flex-col items-center self-center px-6 md:grid md:grid-cols-[auto_370px]">
             <div className="w-full justify-self-center">
