@@ -19,7 +19,6 @@ const Tasks = async () => {
         .order('id', { ascending: true });
 
     const tasks = await supabase.from('tasks').select('*').order('id', { ascending: true });
-
     const boards = (await taskBoards.data) as BoardType[];
 
     return (
