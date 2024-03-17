@@ -39,14 +39,6 @@ const Popup = ({ open, title, onClose, children }: PopupProps) => {
                         <span className="sr-only">Close modal</span>
                     </button>
                 </div>
-
-                {/* <button
-                    className="absolute top-2 right-2 py-1 px-2 
-              border border-neutral-200 rounded-md text-gray-400
-              bg-white hover:bg-gray-50 hover:text-gray-600"
-                    onClick={onClose}>
-                    X
-                </button> */}
                 <div className="mt-8">{children}</div>
             </div>
         </div>
